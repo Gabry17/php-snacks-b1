@@ -10,11 +10,12 @@ $mail = $_GET["mail"];
 $age = $_GET["age"];
 
 //verificare tramite condizione se puo accedere
+//a seconda della condizione stampare Accesso riuscito o negato
 if( strlen($name) > 3 && strpos( $mail , '@') && strpos( $mail , '.') && is_numeric($age) ){
     echo "Accesso riuscito";
 } else {
     echo "Accesso negato";
 }
-//a seconda della condizione stampare Accesso riuscito o negato
+
  
 ?>
