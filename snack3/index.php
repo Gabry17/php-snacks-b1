@@ -52,9 +52,20 @@ $posts = [
     ],
 ];
 
-for($i=0; $i < count($posts); $i++){
-    array_keys($posts);
-    
+$keys = array_keys($posts);
+
+
+for($i=0; $i < count($keys); $i++){
+        $current_keys = $keys[$i];
+        echo $current_keys;
+        $current_key_posts = $posts[$current_keys];
+        for ($e=0; $e < count($current_key_posts); $e++) { 
+            $current_post = $current_key_posts[$e];
+            echo "<br>" . $current_post['title'];
+            echo "<br>" . $current_post['author'];
+            echo "<br>" . $current_post['text'];
+        }
 }
+
 
 ?>
